@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hugo Coto Portfolio</title>
+  <style>
+    html, body { margin: 0; padding: 0; }
+
+    body {
+      background: #272e33;
+      color: #bbc0b0;
+      font-family: Verdana, Arial, Helvetica, sans-serif;
+    }
+
+    .page {
+      max-width: 980px;
+      margin: 24px auto;
+      border: 6px double #bbc0b0; 
+      background: #272e33;
+      box-shadow: 0 0 18px rgba(187, 192, 176, 0.25), inset 0 0 16px rgba(187, 192, 176, 0.1);
+    }
+
+    .header {
+      background: #1f2427;
+      border-bottom: 4px ridge #bbc0b0;
+      text-align: center;
+      padding: 6px 0;
+    }
+    .header h1 {
+      margin: 0;
+      font-size: 28px;
+      letter-spacing: 1px;
+      color: #7fbbb3; /* blue */
+      text-shadow: 0 0 6px #7fbbb3, 0 0 12px #7fbbb3;
+    }
+    .sub {
+      font-size: 12px;
+      color: #a7c080; /* green */
+      margin-top: 2px;
+    }
+
+    table.layout { width: 100%; border-collapse: collapse; }
+    td.sidebar {
+      width: 180px;
+      vertical-align: top;
+      background: #1f2427;
+      border-right: 3px groove #bbc0b0;
+    }
+    td.rightbar {
+      width: 200px;
+      vertical-align: top;
+      background: #1f2427;
+      border-left: 3px groove #bbc0b0;
+    }
+    td.main {
+      vertical-align: top;
+      padding: 16px;
+    }
+
+    .nav {
+      padding: 12px;
+    }
+    .nav h3 {
+      margin: 0 0 8px;
+      font-size: 14px;
+      color: #dbbc7f; /* yellow */
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .nav a {
+      display: block;
+      padding: 6px 8px;
+      margin: 6px 0;
+      text-decoration: none;
+      color: #bbc0b0;
+      border: 2px outset #a7c080; /* green */
+      background: #272e33;
+    }
+    .nav a:hover {
+      background: #2e383c;
+      color: #a7c080; /* green highlight */
+    }
+
+    .badges { display: flex; flex-wrap: wrap; gap: 6px; padding: 10px; }
+    .badge {
+      width: 88px; height: 38px;
+      border: 2px solid #7fbbb3; /* blue */
+      background: linear-gradient(#272e33, #1f2427);
+      display: grid; place-items: center;
+      font-size: 10px; text-transform: uppercase; letter-spacing: .5px;
+      color: #83c092; /* cyan */
+    }
+
+    .badge-double {
+      width: 186px; height: 38px;
+      border: 2px solid #7fbbb3; /* blue */
+      background: linear-gradient(#272e33, #1f2427);
+      display: grid; place-items: center;
+      font-size: 10px; text-transform: uppercase; letter-spacing: .5px;
+      color: #83c092; /* cyan */
+    }
+
+    .main h2 {
+      margin: 0 0 8px; font-size: 20px; color: #7fbbb3;
+      text-shadow: 0 0 6px rgba(127,187,179,.5);
+    }
+    .main p { line-height: 1.5; font-size: 14px; }
+
+    hr.pixel {
+      height: 8px; border: none; margin: 12px 0;
+      background: repeating-linear-gradient(90deg, #bbc0b0 0 8px, transparent 8px 16px);
+      image-rendering: pixelated;
+    }
+
+    .box {
+      border: 4px ridge #7fbbb3; /* blue */
+      background: #1f2427;
+      padding: 10px;
+      margin: 10px 0;
+    }
+    .box h3 { margin: 0 0 6px; font-size: 14px; color: #dbbc7f; }
+
+    .footer {
+      text-align: center; font-size: 12px; color: #bbc0b0; padding: 12px;
+      border-top: 4px ridge #bbc0b0; background: #1f2427;
+    }
+    .counter {
+      display: inline-block; padding: 2px 6px; margin-left: 6px; background: black; border: 2px inset #bbc0b0; font-family: "Courier New", monospace;
+    }
+    marquee { color: #d699b6; font-weight: bold; }
+    a { color: #83c092; }
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="header">
+      <marquee behavior="alternate" scrollamount="5">You're in the wrong place:
+      I'm not a webdev</marquee>
+      <h1>Hugo Coto Flórez</h1>
+      <div class="sub">Low-level developer</div>
+    </div>
+
+    <table class="layout">
+      <tr>
+        <!-- SIDEBAR IZQUIERDA -->
+        <td class="sidebar">
+          <div class="nav">
+            <h3>Navigation</h3>
+            <a href="#About">About</a>
+            <a href="#Projects">Projects</a>
+            <a href="#Tech">Knowledge</a>
+            <a href="#Contact">Contact</a>
+          </div>
+          <div class="box">
+            <h3>More info</h3>
+            <div class="badges">
+              <img src="./image.jpg"></img>
+              <div class="badge">Nationality<br>Spanish</div>
+              <div class="badge">Birth<br>March 2005</div>
+              <div class="badge">Experience<br>None</div>
+              <div class="badge">Free Software<br>Supporter</div>
+              <div class="badge-double">
+              <i>Simplicity carried to the extreme becomes elegance.</i>
+              </div>
+              
+            </div>
+          </div>
+        </td>
+
+        <!-- CONTENIDO PRINCIPAL -->
+        <td class="main">
+          <a id="About"></a>
+          <h2>About</h2>
+          <p>
+          I'm Hugo, a profitless full-time programmer. In my so-called free time I
+          study Informatics Engineering at USC, Spain. Needless to say, I don’t
+          like webdev.
+          </p>
+
+          <hr class="pixel">
+
+          <a id="Projects"></a>
+          <h2>Projects</h2>
+          <div class="box">
+            <h3>Vicel</h3>
+            <p>
+            Vicel is a free, open-source TUI spreadsheet editor. You can read,
+            modify and save data stored in rows and columns. It aims to be an
+            alternative to a certain proprietary, non-gratis, well-known Microsoft
+            program — for casual, non-professional use. <a
+            href="https://github.com/hugoocoto/vicel">Link</a> to the repo.
+            </p>
+          </div>
+          <div class="box">
+            <h3>Todo</h3>
+            <p>
+            A todo-list I use to keep track of school tasks. I had to
+            develop it because I couldn't find a TUI alternative that fit my needs.
+            <a href="https://github.com/hugoocoto/todo">Link</a> to the repo.
+            </p>
+          </div>
+
+          <hr class="pixel">
+
+          <a id="Tech"></a>
+          <h2>Tech I know</h2>
+          <p>
+          I feel able to use C to build whatever my theoretical knowledge
+          allows. I’ve dug deeply into Python, and I use Neovim and Git daily.
+          I plan to get into embedded soon. I usually spend my free time
+          programming, diving into OS internals, language design, and I know a
+          fair amount about VT100 formatting.
+          </p>
+
+          <hr class="pixel">
+
+          <a id="Contact"></a>
+          <h2>Contact</h2>
+          <p>
+            Email: <a href="mailto:higo.coto@member.fsf.org">hugo.coto@member.fsf.org</a>
+          </p>
+        </td>
+
+        <!-- SIDEBAR DERECHA -->
+        <td class="rightbar">
+          <div class="box">
+            <h3>Books I read</h3>
+            <ul>
+              <li>Crafting Interpreters</li>
+              <li>Automate the Boring Stuff with Python</li>
+              <li>The Art of Unix Programming</li>
+              <li>Modern Operating Systems</li>
+              <li>Operating Systems: Three Easy Pieces</li>
+            </ul>
+          </div>
+          <div class="box">
+            <h3>Github here</h3>
+            <a href="https://github.com/hugoocoto">https://github.com/hugoocoto</a>
+          </div>
+        </td>
+      </tr>
+    </table>
+
+    <div class="footer">
+      © 2005–Now Hugo Coto — Portfolio webpage
+    </div>
+  </div>
+</body>
+</html>
