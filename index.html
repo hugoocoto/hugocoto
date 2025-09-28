@@ -3,6 +3,8 @@
 
 <head>
         <meta charset="utf-8" />
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
         <title>Hugo Coto</title>
         <style>
                 @font-face {
@@ -126,8 +128,12 @@
                 <div class="header">
                         <p class="left"> Hugo Coto </p>
                         <div class="center">
-                                <p class="bold"> 1: start_page* </p>
-                                <p> 2: projects </p>
+                                <a href="index.html" style="text-decoration: none; color: inherit;">
+                                        <p class="bold"> 1: start_page* </p>
+                                </a>
+                                <a href="projects.html" style="text-decoration: none; color: inherit;">
+                                        <p> 2: projects </p>
+                                </a>
                         </div>
                 </div>
                 <div class="content">
@@ -166,6 +172,14 @@
                                 Sometimes, one of them works correctly and I can
                                 actually use it. </p>
                         <p> ... </p>
+                        <div class="sameline">
+                                <p class="prompt"> ~/Documents </p>
+                                <p> cd .. </p>
+                        </div>
+                        <div class="sameline">
+                                <p class="prompt"> ~ </p>
+                                <p class="bgwhite"> &nbsp; </p>
+                        </div>
                 </div>
         </div>
 </body>
@@ -209,4 +223,11 @@
         img.ondragstart = function () {
                 return false;
         };
+</script>
+
+<script>
+        document.addEventListener('keydown', function (e) {
+                if (e.key === '1') window.location.href = 'index.html';
+                if (e.key === '2') window.location.href = 'projects.html';
+        });
 </script>

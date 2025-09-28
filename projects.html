@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+        <meta charset="utf-8" />
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <title>Hugo Coto</title>
+        <style>
+                @font-face {
+                        font-family: 'Iosevka';
+                        src: url('IosevkaNerdFontMono-Medium.ttf') format('truetype');
+                        font-weight: normal;
+                        font-style: normal;
+                }
+
+                html,
+                body {
+                        font-family: 'Iosevka', 'Courier New', monospace;
+                        font-size: 20px;
+                        background-color: #272e33;
+                        color: #bbc0b0;
+                        height: 100%;
+                }
+
+                body {
+                        overflow: hidden;
+                }
+
+                p {
+                        margin-top: 0em;
+                        margin-bottom: 0em;
+                }
+
+                .bold {
+                        font-weight: bold;
+                }
+
+                .bgwhite {
+                        background-color: #bbc0b0
+                }
+
+                .black {
+                        color: #859289
+                }
+
+                .red {
+                        color: #e67e80
+                }
+
+                .green {
+                        color: #a7c080
+                }
+
+                .yellow {
+                        color: #dbbc7f
+                }
+
+                .blue {
+                        color: #7fbbb3
+                }
+
+                .magenta {
+                        color: #d699b6
+                }
+
+                .cyan {
+                        color: #83c092
+                }
+
+                .white {
+                        color: #bbc0b0
+                }
+
+                .header {
+                        display: flex;
+                        color: #859289;
+                }
+
+                .term {
+                        max-width: 120ch;
+                        margin: 0 auto;
+                }
+
+                .prompt {
+                        color: #859289;
+                }
+
+                .left {
+                        text-align: left;
+                }
+
+                .center {
+                        position: absolute;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        text-align: center;
+                        display: flex;
+                        gap: 1em;
+                }
+
+                .content {
+                        margin: 0 auto;
+                        padding: 0px;
+                        width: 100%;
+                }
+
+                .sameline {
+                        display: flex;
+                        gap: 1em;
+                }
+
+                .float {
+                        position: absolute;
+                        top: +30%;
+                        right: 30%;
+                        width: 300px;
+                        border: 5px solid #bbc0b0;
+                        /* border-radius: 8px; */
+                        z-index: 100;
+                        /* para que quede encima de otros elementos */
+                }
+        </style>
+</head>
+
+<body>
+        <div class="term">
+                <div class="header">
+                        <p class="left"> Hugo Coto </p>
+                        <div class="center">
+                                <a href="index.html" style="text-decoration: none; color: inherit;">
+                                        <p> 1: start_page </p>
+                                </a>
+                                <a href="projects.html" style="text-decoration: none; color: inherit;">
+                                        <p class="bold"> 2: projects* </p>
+                                </a>
+                        </div>
+                </div>
+                <div class="content">
+                        <div class="sameline">
+                                <p class="prompt"> ~/code </p>
+                                <p> ls -l </p>
+                        </div>
+
+                        <p> total 12908 </p>
+                        <a href="https://github.com/hugoocoto/todo" target="_blank"
+                                style="text-decoration: none; color: inherit;">
+                                <div class="sameline">
+                                        <p> drwxr-xr-x 2 hugo hugo 4096 Sep 28 13:39 </p>
+                                        <p class="blue"> todo </p>
+                                </div>
+                        </a>
+
+                        <a href="https://github.com/hugoocoto/vicel" target="_blank"
+                                style="text-decoration: none; color: inherit;">
+                                <div class="sameline">
+                                        <p> drwxr-xr-x 2 hugo hugo 4096 Sep 28 13:39 </p>
+                                        <p class="blue"> vicel </p>
+                                </div>
+                        </a>
+
+                        <a href="https://github.com/hugoocoto/tetris" target="_blank"
+                                style="text-decoration: none; color: inherit;">
+                                <div class="sameline">
+                                        <p> drwxr-xr-x 2 hugo hugo 4096 Sep 28 13:39 </p>
+                                        <p class="blue"> tetris </p>
+                                </div>
+                        </a>
+
+                        <a href="https://github.com/hugoocoto/type" target="_blank"
+                                style="text-decoration: none; color: inherit;">
+                                <div class="sameline">
+                                        <p> drwxr-xr-x 2 hugo hugo 4096 Sep 28 13:39 </p>
+                                        <p class="blue"> type </p>
+                                </div>
+                        </a>
+
+                        <a href="https://github.com/hugoocoto/pm" target="_blank"
+                                style="text-decoration: none; color: inherit;">
+                                <div class="sameline">
+                                        <p> drwxr-xr-x 2 hugo hugo 4096 Sep 28 13:39 </p>
+                                        <p class="blue"> pm </p>
+                                </div>
+                        </a>
+                        <div class="sameline">
+                                <p class="prompt"> ~/code </p>
+                                <p class="bgwhite"> &nbsp; </p>
+                        </div>
+                </div>
+        </div>
+        <script>
+                const img = document.getElementById('dragImg');
+
+                img.onmousedown = function (e) {
+                        let shiftX = e.clientX - img.getBoundingClientRect().left;
+                        let shiftY = e.clientY - img.getBoundingClientRect().top;
+
+                        img.style.position = 'absolute';
+                        img.style.zIndex = 1000;
+                        document.body.append(img);
+
+                        function moveAt(pageX, pageY) {
+                                img.style.left = pageX - shiftX + 'px';
+                                img.style.top = pageY - shiftY + 'px';
+                        }
+
+                        moveAt(e.pageX, e.pageY);
+
+                        function onMouseMove(e) {
+                                moveAt(e.pageX, e.pageY);
+                        }
+
+                        document.addEventListener('mousemove', onMouseMove);
+
+                        function onMouseUp() {
+                                document.removeEventListener('mousemove', onMouseMove);
+                                document.removeEventListener('mouseup', onMouseUp);
+                        }
+
+                        document.addEventListener('mouseup', onMouseUp);
+                };
+
+                img.ondragstart = function () {
+                        return false;
+                };
+        </script>
+
+        <script>
+                document.addEventListener('keydown', function (e) {
+                        if (e.key === '1' || e.code === 'Numpad1') window.location.href = 'start_page.html';
+                        if (e.key === '2' || e.code === 'Numpad2') window.location.href = 'projects.html';
+                });
+        </script>
+
+</body>
+
+</html>
