@@ -1,123 +1,205 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
+
 <head>
-  <meta charset="utf-8" />
-  <!-- <meta name="viewport" content="width=100%, initial-scale=1" /> -->
-  <title>Hugo Coto Portfolio</title>
+        <meta charset="utf-8" />
+        <title>Hugo Coto</title>
+        <style>
+                html,
+                body {
+                        font-family: Iosevka NFM;
+                        font-size: 20px;
+                        background-color: #272e33;
+                        color: #bbc0b0;
+                        height: 100%;
+                }
 
+                body {
+                        overflow: hidden;
+                }
+
+                p {
+                        margin-top: 0em;
+                        margin-bottom: 0em;
+                }
+
+                .bold {
+                        font-weight: bold;
+                }
+
+                .bgwhite {
+                        background-color: #bbc0b0
+                }
+
+                .black {
+                        color: #859289
+                }
+
+                .red {
+                        color: #e67e80
+                }
+
+                .green {
+                        color: #a7c080
+                }
+
+                .yellow {
+                        color: #dbbc7f
+                }
+
+                .blue {
+                        color: #7fbbb3
+                }
+
+                .magenta {
+                        color: #d699b6
+                }
+
+                .cyan {
+                        color: #83c092
+                }
+
+                .white {
+                        color: #bbc0b0
+                }
+
+                .header {
+                        display: flex;
+                        color: #859289;
+                }
+
+                .term {
+                        max-width: 120ch;
+                        margin: 0 auto;
+                }
+
+                .prompt {
+                        color: #859289;
+                }
+
+                .left {
+                        text-align: left;
+                }
+
+                .center {
+                        position: absolute;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        text-align: center;
+                        display: flex;
+                        gap: 1em;
+                }
+
+                .content {
+                        margin: 0 auto;
+                        padding: 0px;
+                        width: 100%;
+                }
+
+                .sameline {
+                        display: flex;
+                        gap: 1em;
+                }
+
+                .float {
+                        position: absolute;
+                        top: +30%;
+                        right: 30%;
+                        width: 300px;
+                        border: 5px solid #bbc0b0;
+                        /* border-radius: 8px; */
+                        z-index: 100;
+                        /* para que quede encima de otros elementos */
+                }
+        </style>
 </head>
+
 <body>
-  <div class="page">
-    <div class="header">
-      <marquee behavior="alternate" scrollamount="5">You're in the wrong place:
-      I'm not a webdev</marquee>
-      <h1>Hugo Coto Flórez</h1>
-      <div class="sub">Low-level developer</div>
-    </div>
-
-    <table class="layout">
-      <tr>
-        <!-- SIDEBAR IZQUIERDA -->
-        <td class="sidebar">
-          <div class="nav">
-            <h3>Navigation</h3>
-            <a href="#About">About</a>
-            <a href="#Projects">Projects</a>
-            <a href="#Tech">Knowledge</a>
-            <a href="#Contact">Contact</a>
-          </div>
-          <div class="box">
-            <h3>More info</h3>
-            <div class="badges">
-              <img src="./image.jpg"></img>
-              <div class="badge">Nationality<br>Spanish</div>
-              <div class="badge">Birth<br>March 2005</div>
-              <div class="badge">Experience<br>None</div>
-              <div class="badge">Free Software<br>Supporter</div>
-              <div class="badge-double">
-                      <i>Simplicity carried to the<br>extreme becomes elegance.</i>
-              </div>
-              
-            </div>
-          </div>
-        </td>
-
-        <!-- CONTENIDO PRINCIPAL -->
-        <td class="main">
-          <a id="About"></a>
-          <h2>About me</h2>
-          <p>
-          I'm Hugo, a profitless full-time programmer. In my non-free time I
-          study Informatics Engineering at USC, Spain.
-          </p>
-
-          <hr class="pixel">
-
-          <a id="Projects"></a>
-          <h2>Projects</h2>
-          <div class="box">
-            <h3>Vicel</h3>
-            <p>
-            Vicel is a free, open-source TUI spreadsheet editor. You can read,
-            modify and save data stored in rows and columns. It aims to be an
-            alternative to a certain proprietary, non-gratis, well-known Microsoft
-            program — for casual, non-professional use. <a
-            href="https://github.com/hugoocoto/vicel">Link</a> to the repo.
-            </p>
-          </div>
-          <div class="box">
-            <h3>Todo</h3>
-            <p>
-            A todo-list I use to keep track of school tasks. I had to
-            develop it because I couldn't find a TUI alternative that fit my needs.
-            <a href="https://github.com/hugoocoto/todo">Link</a> to the repo.
-            </p>
-          </div>
-
-          <hr class="pixel">
-
-          <a id="Tech"></a>
-          <h2>Tech I know</h2>
-          <p>
-          I feel able to use C to build whatever my theoretical knowledge
-          allows. I’ve dug deeply into Python, and I use Neovim and Git daily.
-          I plan to get into embedded soon. I usually spend my free time
-          programming, diving into OS internals, language design, and I know a
-          fair amount about VT100 formatting.
-          </p>
-
-          <hr class="pixel">
-
-          <a id="Contact"></a>
-          <h2>Contact</h2>
-          <p>
-            Email: <a href="mailto:higo.coto@member.fsf.org">hugo.coto@member.fsf.org</a>
-          </p>
-        </td>
-
-        <!-- SIDEBAR DERECHA -->
-        <td class="rightbar">
-          <div class="box">
-            <h3>Books I read</h3>
-            <ul>
-              <li>Crafting Interpreters</li>
-              <li>Automate the Boring Stuff with Python</li>
-              <li>The Art of Unix Programming</li>
-              <li>Modern Operating Systems</li>
-              <li>Operating Systems: Three Easy Pieces</li>
-            </ul>
-          </div>
-          <div class="box">
-            <h3>Github here</h3>
-            <a href="https://github.com/hugoocoto">https://github.com/hugoocoto</a>
-          </div>
-        </td>
-      </tr>
-    </table>
-
-    <div class="footer">
-      © 2005–Now Hugo Coto — Portfolio webpage
-    </div>
-  </div>
+        <div class="term">
+                <div class="header">
+                        <p class="left"> Hugo Coto </p>
+                        <div class="center">
+                                <p class="bold"> 1: start_page* </p>
+                                <p> 2: projects </p>
+                        </div>
+                </div>
+                <div class="content">
+                        <div class="sameline">
+                                <p class="prompt"> ~ </p>
+                                <p> ls -A </p>
+                        </div>
+                        <div class="sameline">
+                                <p class="blue"> .config </p>
+                                <p class="blue"> Downloads </p>
+                                <p class="blue"> Documents </p>
+                                <p class="blue"> secrect_project </p>
+                        </div>
+                        <div class="sameline">
+                                <p class="prompt"> ~ </p>
+                                <p> cd Documents && ls </p>
+                        </div>
+                        <div class="sameline">
+                                <p class="yellow"> me.png </p>
+                                <p class="cyan"> resume.typ </p>
+                                <p class="red"> resume.pdf </p>
+                        </div>
+                        <div class="sameline">
+                                <p class="prompt"> ~/Documents </p>
+                                <p> feh me.png & </p>
+                                <img src="./image.jpg" class="float" id="dragImg">
+                        </div>
+                        <div class="sameline">
+                                <p class="prompt"> ~/Documents </p>
+                                <p> cat resume.pdf </p>
+                        </div>
+                                <p> About Me </p>
+                                <p> I’m a Spanish Informatics Engineering
+                                student at USC. I like programming in my free
+                                time, so I create a lot of small tools.
+                                Sometimes, one of them works correctly and I can
+                                actually use it. </p>
+                                <p> ... </p>
+                </div>
+        </div>
 </body>
+
 </html>
+
+
+
+<script>
+        const img = document.getElementById('dragImg');
+
+        img.onmousedown = function (e) {
+                let shiftX = e.clientX - img.getBoundingClientRect().left;
+                let shiftY = e.clientY - img.getBoundingClientRect().top;
+
+                img.style.position = 'absolute';
+                img.style.zIndex = 1000;
+                document.body.append(img);
+
+                function moveAt(pageX, pageY) {
+                        img.style.left = pageX - shiftX + 'px';
+                        img.style.top = pageY - shiftY + 'px';
+                }
+
+                moveAt(e.pageX, e.pageY);
+
+                function onMouseMove(e) {
+                        moveAt(e.pageX, e.pageY);
+                }
+
+                document.addEventListener('mousemove', onMouseMove);
+
+                function onMouseUp() {
+                        document.removeEventListener('mousemove', onMouseMove);
+                        document.removeEventListener('mouseup', onMouseUp);
+                }
+
+                document.addEventListener('mouseup', onMouseUp);
+        };
+
+        img.ondragstart = function () {
+                return false;
+        };
+</script>
